@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Mission · Boudicca Productions</title>
+    <meta
+      name="description"
+      content="The Boudicca Productions mission in full, plus local stories and events that bring it to life."
+    />
+    <link rel="canonical" href="https://boudiccaproductions.com/mission.html" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu" />
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
+    <a class="brand-chip" href="index.html" aria-label="Boudicca Productions home"><img src="assets/img/wordmark.png" alt="Boudicca Productions" width="1184" height="346" /></a>
+    <nav class="nav-overlay" aria-label="Primary">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">What's On</a></li>
+          <li><a href="who-we-are.html">Who We Are</a></li>
+          <li><a href="mission.html" aria-current="page">Our Mission</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#newsletter">Newsletter</a></li>
+      </ul>
+    </nav>
+        <header class="site-header">
+      <!-- Crossfade slideshow. Placeholder "Coming Soon" slides use the
+           marquee's cream/green shades. Swap each .hero-slide for an image:
+           <div class="hero-slide"><img src="assets/img/hero/1.jpg" alt="" /></div>
+           (I'll add object-fit cover styling when the first real image lands). -->
+      <div class="hero-slider" aria-label="Coming soon">
+        <div class="hero-slide shade-g1"><span>Coming Soon</span></div>
+        <div class="hero-slide shade-c1"><span>Coming Soon</span></div>
+        <div class="hero-slide shade-g2"><span>Coming Soon</span></div>
+      </div>
+    </header>
+
+        <main>
+      <section class="section center">
+        <div class="container">
+          <p class="eyebrow">Female-Founded &middot; Artist-Led</p>
+          <h1>Our Mission</h1>
+          <div class="prose">
+            <p>
+              Female-founded and artist-led, Boudicca Productions creates bold new
+              work that elevates women's voices and celebrates stories too often
+              left untold.
+            </p>
+            <!-- PLACEHOLDER: the longer mission. Expand on the why, the values,
+                 who the work is for, and the change the company wants to make. -->
+            <p>
+              [Longer mission statement to follow - a few paragraphs setting out
+              the company's purpose, the stories it seeks to tell, and the
+              communities it serves.]
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ LOCAL STORIES / EVENTS ============ -->
+      <section class="section section--tint">
+        <div class="container">
+          <p class="eyebrow center">In Our Community</p>
+          <h2 class="center">Local stories &amp; events</h2>
+          <p class="lede center">
+            Work and moments that bring our mission to life.
+          </p>
+          <!-- PLACEHOLDER cards: swap .photo-shim for <img class="card__photo" ...>,
+               then add a title and short description per story or event. -->
+          <div class="grid grid--3" style="margin-top: 2.5rem">
+            <article class="card">
+              <div class="card__photo photo-shim">Photo</div>
+              <h3 class="card__name">Story or event title</h3>
+              <p class="card__bio">Short description to follow.</p>
+            </article>
+            <article class="card">
+              <div class="card__photo photo-shim">Photo</div>
+              <h3 class="card__name">Story or event title</h3>
+              <p class="card__bio">Short description to follow.</p>
+            </article>
+            <article class="card">
+              <div class="card__photo photo-shim">Photo</div>
+              <h3 class="card__name">Story or event title</h3>
+              <p class="card__bio">Short description to follow.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-box footer-box--logo">
+            <img
+              class="footer-logo"
+              src="assets/img/logo.png"
+              alt="Boudicca Productions"
+              width="900"
+              height="900"
+            />
+          </div>
+          <div class="footer-box footer-box--text">
+            <p class="footer-tagline">
+              Female-founded, artist-led theatre. Stage now - film and
+              television to come.
+            </p>
+          </div>
+          <div class="footer-box">
+            <h4>Explore</h4>
+            <ul class="footer-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="who-we-are.html">Who We Are</a></li>
+              <li><a href="projects.html">What's On</a></li>
+            </ul>
+          </div>
+          <div class="footer-box">
+            <h4>Contact</h4>
+            <ul class="footer-list">
+              <li><a href="mailto:hello@boudiccaproductions.com">Email us</a></li>
+              <li><a href="https://www.instagram.com/boudiccaproductions/">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Boudicca Productions</span>
+          <span>boudiccaproductions.com</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var t = document.getElementById("nav-toggle");
+        if (!t) return;
+        document.querySelectorAll(".nav-overlay a").forEach(function (a) {
+          a.addEventListener("click", function () { t.checked = false; });
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") t.checked = false;
+        });
+      })();
+    </script>
+  </body>
+</html>

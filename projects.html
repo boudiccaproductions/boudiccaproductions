@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What's On · Boudicca Productions</title>
+    <meta
+      name="description"
+      content="Boudicca Productions' theatre work. Film and television to come."
+    />
+    <link rel="canonical" href="https://boudiccaproductions.com/projects.html" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu" />
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
+    <a class="brand-chip" href="index.html" aria-label="Boudicca Productions home"><img src="assets/img/wordmark.png" alt="Boudicca Productions" width="1184" height="346" /></a>
+    <nav class="nav-overlay" aria-label="Primary">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" aria-current="page">What's On</a></li>
+          <li><a href="who-we-are.html">Who We Are</a></li>
+          <li><a href="mission.html">Our Mission</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#newsletter">Newsletter</a></li>
+      </ul>
+    </nav>
+        <header class="site-header">
+      <!-- Crossfade slideshow. Placeholder "Coming Soon" slides use the
+           marquee's cream/green shades. Swap each .hero-slide for an image:
+           <div class="hero-slide"><img src="assets/img/hero/1.jpg" alt="" /></div>
+           (I'll add object-fit cover styling when the first real image lands). -->
+      <div class="hero-slider" aria-label="Coming soon">
+        <div class="hero-slide shade-g1"><span>Coming Soon</span></div>
+        <div class="hero-slide shade-c1"><span>Coming Soon</span></div>
+        <div class="hero-slide shade-g2"><span>Coming Soon</span></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section center">
+        <div class="container">
+          <p class="eyebrow">Our Work</p>
+          <h1>What's On</h1>
+
+          <!-- Categories. Theatre is live for launch.
+               TV and Film are drawn "to be hidden" - reveal by removing
+               `is-hidden` when that work exists. -->
+          <div class="cats">
+            <span class="cat cat--active">Theatre</span>
+            <span class="cat is-hidden">TV</span>
+            <span class="cat is-hidden">Film</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ IMAGE CAROUSEL ============ -->
+      <!-- PLACEHOLDER productions. Add posters to assets/img/projects/ and swap
+           each .photo-shim div for an <img class="carousel__img" ...>. -->
+      <section class="section" style="padding-top:0" aria-label="Theatre productions">
+        <div class="container">
+          <div class="carousel" tabindex="0" aria-label="Production gallery, scroll horizontally">
+            <figure class="carousel__item">
+              <div class="carousel__img photo-shim">Production photo</div>
+              <figcaption>
+                <p class="carousel__title">Production One</p>
+                <p class="carousel__meta">Theatre &middot; 2026</p>
+              </figcaption>
+            </figure>
+            <figure class="carousel__item">
+              <div class="carousel__img photo-shim">Production photo</div>
+              <figcaption>
+                <p class="carousel__title">Production Two</p>
+                <p class="carousel__meta">Theatre &middot; 2026</p>
+              </figcaption>
+            </figure>
+            <figure class="carousel__item">
+              <div class="carousel__img photo-shim">Production photo</div>
+              <figcaption>
+                <p class="carousel__title">Production Three</p>
+                <p class="carousel__meta">Theatre &middot; Coming soon</p>
+              </figcaption>
+            </figure>
+          </div>
+          <p class="eyebrow center" style="margin-top:1.5rem">
+            Scroll to explore &rarr;
+          </p>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <!-- ============ DETAIL TEMPLATE (page 3): mission / logo / longer bio / bullets ============
+           This block is the reusable "production detail" layout. Duplicate a
+           section like this per production, or split into its own page. -->
+      <section class="section" id="featured">
+        <div class="container detail">
+          <div>
+            <p class="eyebrow">Featured Production</p>
+            <h2>Production Title</h2>
+          </div>
+          <p class="lede">
+            <!-- PLACEHOLDER longer bio / synopsis -->
+            A longer description of the production goes here - the story, the
+            staging, the company's intent. Two or three sentences that give a
+            visitor the flavour of the work.
+          </p>
+          <ul class="detail__bullets">
+            <li>Venue &amp; dates - to be confirmed</li>
+            <li>Director &amp; cast - to be confirmed</li>
+            <li>Running time - to be confirmed</li>
+            <li>Ticket information - to be confirmed</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ NEWSLETTER (pre-footer band) ============ -->
+      <section class="section newsletter" id="newsletter">
+        <div class="container">
+          <p class="eyebrow">Stay in the Know</p>
+          <h2>Join our mailing list</h2>
+          <p class="lede" style="margin-top:0">
+            Be first to hear about new productions, casting calls and opening
+            nights.
+          </p>
+          <!-- PLACEHOLDER: set `action` to your mailing-list provider (Mailchimp,
+               MailerLite, Buttondown, Formspree...). Static hosting cannot process
+               the POST itself. -->
+          <form class="signup" action="#" method="post">
+            <label class="sr-only" for="nl-email">Email address</label>
+            <input
+              id="nl-email"
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+            <button class="btn btn--cta" type="submit">Sign up</button>
+          </form>
+          <p class="newsletter__note">
+            We will only email about our work. Unsubscribe anytime.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-box footer-box--logo">
+            <img
+              class="footer-logo"
+              src="assets/img/logo.png"
+              alt="Boudicca Productions"
+              width="900"
+              height="900"
+            />
+          </div>
+          <div class="footer-box footer-box--text">
+            <p class="footer-tagline">
+              Female-founded, artist-led theatre. Stage now - film and
+              television to come.
+            </p>
+          </div>
+          <div class="footer-box">
+            <h4>Explore</h4>
+            <ul class="footer-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="who-we-are.html">Who We Are</a></li>
+              <li><a href="projects.html">What's On</a></li>
+            </ul>
+          </div>
+          <div class="footer-box">
+            <h4>Contact</h4>
+            <ul class="footer-list">
+              <li><a href="mailto:hello@boudiccaproductions.com">Email us</a></li>
+              <li><a href="https://www.instagram.com/boudiccaproductions/">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Boudicca Productions</span>
+          <span>boudiccaproductions.com</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var t = document.getElementById("nav-toggle");
+        if (!t) return;
+        document.querySelectorAll(".nav-overlay a").forEach(function (a) {
+          a.addEventListener("click", function () { t.checked = false; });
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") t.checked = false;
+        });
+      })();
+    </script>
+  </body>
+</html>

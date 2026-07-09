@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boudicca Productions</title>
+    <meta
+      name="description"
+      content="Female-founded, artist-led theatre company creating bold new work that elevates women's voices. Stage now; film and television to come."
+    />
+    <link rel="canonical" href="https://boudiccaproductions.com/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu" />
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
+    <a class="brand-chip" href="index.html" aria-label="Boudicca Productions home"><img src="assets/img/wordmark.png" alt="Boudicca Productions" width="1184" height="346" /></a>
+    <nav class="nav-overlay" aria-label="Primary">
+      <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="projects.html">What's On</a></li>
+          <li><a href="who-we-are.html">Who We Are</a></li>
+          <li><a href="mission.html">Our Mission</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#newsletter">Newsletter</a></li>
+      </ul>
+    </nav>
+    <header class="site-header site-header--flush">
+      <!-- LOGO ROW as the top banner: logo centred, a placeholder block each side.
+           Swap the side blocks for images/content later. -->
+      <div class="container" style="padding: 4.5rem 0 0">
+        <img
+          class="brand-band__logo"
+          src="assets/img/logo-clear.png"
+          alt=""
+          width="900"
+          height="900"
+        />
+      </div>
+    </header>
+
+    <main>
+      <h1 class="sr-only">Boudicca Productions</h1>
+
+      <!-- ============ MISSION STATEMENT ============ -->
+      <section
+        class="section section--tight center"
+        id="mission"
+        style="padding-top: 0"
+      >
+        <div class="container">
+          <p class="eyebrow">Our Mission</p>
+          <p class="lede">
+            Female-founded and artist-led, Boudicca Productions creates bold new
+            work that elevates women's voices and celebrates stories too often
+            left untold.
+          </p>
+          <p style="margin-top: 2rem; margin-inline: auto">
+            <a class="btn" href="mission.html">Learn More</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ CROSSFADE (below the mission) ============ -->
+      <!-- Placeholder "Coming Soon" slides; swap each .hero-slide for an image:
+           <div class="hero-slide"><img src="assets/img/hero/1.jpg" alt="" /></div> -->
+      <section class="section" style="padding-block: 0" aria-label="Coming soon">
+        <div class="hero-slider">
+          <div class="hero-slide shade-g1"><span>Coming Soon</span></div>
+          <div class="hero-slide shade-c1"><span>Coming Soon</span></div>
+          <div class="hero-slide shade-g2"><span>Coming Soon</span></div>
+        </div>
+      </section>
+
+      <!-- ============ CTA ROW (three link blocks, no logo) ============ -->
+      <section class="section section--tight center">
+        <div class="container">
+          <div class="cta-row">
+            <a class="logo-side shade-c1" href="who-we-are.html">
+              <span class="logo-side__title">Meet the Company</span>
+              <span class="logo-side__cue">Who we are &rarr;</span>
+            </a>
+            <a class="logo-side shade-g1" href="projects.html">
+              <span class="logo-side__title">What's On</span>
+              <span class="logo-side__cue">Explore &rarr;</span>
+            </a>
+            <a class="logo-side shade-c2" href="contact.html">
+              <span class="logo-side__title">Get in Touch</span>
+              <span class="logo-side__cue">Say hello &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ COMING SOON (text, own section) ============ -->
+      <section class="section section--tight center" aria-label="What's next">
+        <div class="container">
+          <p class="eyebrow">What's Next</p>
+          <h2>Exciting things coming soon</h2>
+          <p class="lede">
+            We are in the early phases of a new production. Watch this space -
+            more to be revealed soon.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ NEWSLETTER ============ -->
+      <section class="section section--tight newsletter" id="newsletter">
+        <div class="container">
+          <p class="eyebrow">Stay in the Know</p>
+          <h2>Join our mailing list</h2>
+          <p class="lede" style="margin-top: 0">
+            Be first to hear about new productions, casting calls and opening
+            nights.
+          </p>
+          <!-- PLACEHOLDER: set `action` to your mailing-list provider (Mailchimp,
+               MailerLite, Buttondown, Formspree...). Static hosting cannot process
+               the POST itself. -->
+          <form class="signup" action="#" method="post">
+            <label class="sr-only" for="nl-email-home">Email address</label>
+            <input
+              id="nl-email-home"
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+            <button class="btn btn--cta" type="submit">Sign up</button>
+          </form>
+          <p class="newsletter__note">
+            We will only email about our work. Unsubscribe anytime.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ MARQUEE (standalone) ============ -->
+      <section
+        class="section section--tight"
+        style="padding-bottom: 0"
+        aria-label="Upcoming productions"
+      >
+        <!-- MARQUEE: full-bleed, infinite auto-scroll. The track holds TWO identical
+             copies of the slides; the CSS shifts it -50% for a seamless loop, so keep
+             the copies in sync. Placeholder slides (cream/green shades) mark where
+             linked production images will go. Swap each <a> in BOTH copies for a real
+             image link, e.g.
+               <a class="coming-slide" href="/show">
+                 <img src="assets/img/projects/show.jpg" alt="Show title" />
+               </a> -->
+        <div class="marquee" aria-label="Upcoming productions">
+          <div class="marquee__track">
+            <!-- copy 1 -->
+            <a class="coming-slide shade-c1" href="#"><span>Image + link</span></a>
+            <a class="coming-slide shade-g1" href="#"><span>Image + link</span></a>
+            <a class="coming-slide shade-c2" href="#"><span>Image + link</span></a>
+            <a class="coming-slide shade-g2" href="#"><span>Image + link</span></a>
+            <a class="coming-slide shade-c3" href="#"><span>Image + link</span></a>
+            <a class="coming-slide shade-g3" href="#"><span>Image + link</span></a>
+            <!-- copy 2 (visual duplicate, hidden from assistive tech) -->
+            <a class="coming-slide shade-c1" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
+            <a class="coming-slide shade-g1" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
+            <a class="coming-slide shade-c2" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
+            <a class="coming-slide shade-g2" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
+            <a class="coming-slide shade-c3" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
+            <a class="coming-slide shade-g3" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER (split) ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-box footer-box--logo">
+            <img
+              class="footer-logo"
+              src="assets/img/logo.png"
+              alt="Boudicca Productions"
+              width="900"
+              height="900"
+            />
+          </div>
+          <div class="footer-box footer-box--text">
+            <p class="footer-tagline">
+              Female-founded, artist-led theatre. Stage now - film and
+              television to come.
+            </p>
+          </div>
+          <div class="footer-box">
+            <h4>Explore</h4>
+            <ul class="footer-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="who-we-are.html">Who We Are</a></li>
+              <li><a href="projects.html">What's On</a></li>
+            </ul>
+          </div>
+          <div class="footer-box">
+            <h4>Contact</h4>
+            <ul class="footer-list">
+              <li><a href="mailto:hello@boudiccaproductions.com">Email us</a></li>
+              <li><a href="https://www.instagram.com/boudiccaproductions/">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Boudicca Productions</span>
+          <span>boudiccaproductions.com</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var t = document.getElementById("nav-toggle");
+        if (!t) return;
+        document.querySelectorAll(".nav-overlay a").forEach(function (a) {
+          a.addEventListener("click", function () { t.checked = false; });
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") t.checked = false;
+        });
+      })();
+    </script>
+  </body>
+</html>
