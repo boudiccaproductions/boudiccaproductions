@@ -24,7 +24,6 @@
 
   --track: 0.35em; /* the logo's signature letter-spacing */
 }
-
 /* ---- reset-ish ---- */
 *,
 *::before,
@@ -498,7 +497,7 @@ p {
   overflow: hidden;
   border-block: 1px solid var(--forest); /* footer-style outline, full width */
   padding-block: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 1.75rem;
 }
 .marquee__track {
   display: flex;
@@ -834,11 +833,12 @@ p {
 .site-footer {
   background: var(--parchment);
   color: var(--forest);
-  padding-block: clamp(2.5rem, 5vw, 4rem);
+  padding-block: clamp(2rem, 4vw, 3rem);
 }
 .site-footer .container {
-  border: 1px solid var(--forest); /* dark green frame */
-  padding: clamp(1.8rem, 4vw, 3rem);
+  border: 0;
+  width: min(100% - 2rem, var(--container));
+  padding: 0;
 }
 .site-footer a {
   color: var(--forest);
@@ -851,10 +851,10 @@ p {
 }
 .footer-grid {
   display: grid;
-  gap: 2rem 2.5rem;
-  grid-template-columns: repeat(4, 1fr); /* image | text | explore | contact */
-  align-items: center; /* all columns line up with the middle of the logo */
-  justify-items: center; /* centre each block in its column — even across the width */
+  gap: 1.25rem 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
   text-align: center;
 }
 .footer-box {
@@ -873,15 +873,6 @@ p {
   margin: 0 auto;
   font-size: 0.92rem;
 }
-.footer-grid h4 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: var(--track);
-  font-size: 0.72rem;
-  margin: 0 0 1rem;
-  opacity: 0.75;
-}
 .footer-brand {
   font-family: "Cormorant Garamond", serif;
   text-transform: uppercase;
@@ -899,9 +890,9 @@ p {
   font-size: 0.92rem;
 }
 .footer-bottom {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(22, 40, 31, 0.25);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(22, 40, 31, 0.18);
   font-weight: 400;
   letter-spacing: 0.1em;
   font-size: 0.72rem;
@@ -916,7 +907,7 @@ p {
 @media (max-width: 680px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1.75rem;
+    gap: 1.1rem;
   }
 }
 @media (max-width: 400px) {
