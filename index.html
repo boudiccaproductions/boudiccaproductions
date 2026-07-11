@@ -23,9 +23,8 @@
           <li><a href="projects.html">What's On</a></li>
           <li><a href="who-we-are.html">Who We Are</a></li>
           <li><a href="mission.html">Our Mission</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html#newsletter">Newsletter</a></li>
-      </ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>      </ul>
     </nav>
     <header class="site-header site-header--flush">
       <!-- LOGO ROW as the top banner: logo centred, a placeholder block each side.
@@ -75,7 +74,7 @@
       </section>
 
       <!-- ============ CTA ROW (three link blocks, no logo) ============ -->
-      <section class="section section--tight center">
+      <section class="section section--tight center cta-row-section">
         <div class="container">
           <div class="cta-row">
             <a class="logo-side shade-c1" href="who-we-are.html">
@@ -95,42 +94,13 @@
       </section>
 
       <!-- ============ COMING SOON (text, own section) ============ -->
-      <section class="section section--tight center" aria-label="What's next">
+      <section class="section section--tight center what-next-block" aria-label="What's next">
         <div class="container">
           <p class="eyebrow">What's Next</p>
           <h2>Exciting things coming soon</h2>
           <p class="lede">
             We are in the early phases of a new production. Watch this space -
             more to be revealed soon.
-          </p>
-        </div>
-      </section>
-
-      <!-- ============ NEWSLETTER ============ -->
-      <section class="section section--tight newsletter" id="newsletter">
-        <div class="container">
-          <p class="eyebrow">Stay in the Know</p>
-          <h2>Join our mailing list</h2>
-          <p class="lede" style="margin-top: 0">
-            Be first to hear about new productions, casting calls and opening
-            nights.
-          </p>
-          <!-- PLACEHOLDER: set `action` to your mailing-list provider (Mailchimp,
-               MailerLite, Buttondown, Formspree...). Static hosting cannot process
-               the POST itself. -->
-          <form class="signup" action="#" method="post">
-            <label class="sr-only" for="nl-email-home">Email address</label>
-            <input
-              id="nl-email-home"
-              type="email"
-              name="email"
-              placeholder="you@example.com"
-              required
-            />
-            <button class="btn btn--cta" type="submit">Sign up</button>
-          </form>
-          <p class="newsletter__note">
-            We will only email about our work. Unsubscribe anytime.
           </p>
         </div>
       </section>
@@ -166,6 +136,27 @@
             <a class="coming-slide shade-c3" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
             <a class="coming-slide shade-g3" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
           </div>
+        </div>
+      </section>
+          <section class="section section--tint newsletter" id="newsletter">
+        <div class="container">
+          <p class="eyebrow">Stay in the Know</p>
+          <h2>Join our mailing list</h2>
+          <p class="lede" style="margin-top: 0">
+            Be first to hear about new productions, casting calls and opening
+            nights.
+          </p>
+          <!-- PLACEHOLDER: set `action` to your mailing-list provider (Mailchimp,
+               MailerLite, Buttondown, Formspree...). Static hosting cannot process
+               the POST itself. -->
+          <form class="signup" action="#" method="post">
+            <label class="sr-only" for="nl-email">Email address</label>
+            <input id="nl-email" type="email" name="email" placeholder="you@example.com" required />
+            <button class="btn btn--cta" type="submit">Sign up</button>
+          </form>
+          <p class="newsletter__note">
+            We will only email about our work. Unsubscribe anytime.
+          </p>
         </div>
       </section>
     </main>

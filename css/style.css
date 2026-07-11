@@ -135,6 +135,19 @@ p {
 .section--tight {
   padding-block: clamp(1.25rem, 3vw, 2.25rem);
 }
+.cta-row-section {
+  padding-top: clamp(2rem, 4vw, 3.25rem);
+}
+.what-next-block {
+  min-height: clamp(220px, 28vw, 320px);
+  display: grid;
+  place-items: center;
+}
+.what-next-block .container {
+  display: grid;
+  gap: 0.35rem;
+  justify-items: center;
+}
 
 .rule {
   border: 0;
@@ -202,6 +215,9 @@ p {
 .newsletter {
   background: var(--parchment-shade);
   text-align: center;
+}
+.newsletter .container {
+  width: min(100% - 2rem, var(--container));
 }
 .signup {
   display: flex;
@@ -716,6 +732,50 @@ p {
   font-size: 0.65rem;
 }
 
+.blog-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.blog-row::-webkit-scrollbar {
+  height: 10px;
+}
+.blog-row::-webkit-scrollbar-thumb {
+  background: rgba(43, 76, 63, 0.2);
+  border-radius: 999px;
+}
+.blog-tile {
+  flex: 0 0 clamp(240px, 28vw, 340px);
+  display: grid;
+  gap: 0.8rem;
+  padding: clamp(0.9rem, 2vw, 1.4rem);
+  border: 1px solid rgba(43, 76, 63, 0.18);
+  box-shadow: 0 0 0 1px rgba(247, 245, 235, 0.38) inset;
+  scroll-snap-align: start;
+}
+.blog-tile__body {
+  display: grid;
+  gap: 0.35rem;
+}
+.blog-tile .eyebrow {
+  margin-bottom: 0.3rem;
+}
+.blog-tile .card__bio {
+  margin-bottom: 0;
+}
+
+@media (max-width: 780px) {
+  .blog-row {
+    gap: 0.8rem;
+  }
+  .blog-tile {
+    flex-basis: clamp(220px, 74vw, 320px);
+  }
+}
+
 /* ============================================================
    Projects — category tabs + carousel
    ============================================================ */
@@ -851,34 +911,24 @@ p {
 }
 .footer-grid {
   display: grid;
-  gap: 1.25rem 2rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: center;
   justify-items: center;
   text-align: center;
 }
 .footer-box {
+  width: 100%;
   text-align: center;
 }
+.footer-box--logo {
+  display: flex;
+  justify-content: center;
+}
 .footer-logo {
-  width: min(170px, 100%);
+  width: min(170px, 72%);
   height: auto;
-}
-.footer-box--text {
-  align-self: center; /* line up with the vertical middle of the logo */
-}
-.footer-tagline {
-  font-weight: 400;
-  max-width: 26ch;
-  margin: 0 auto;
-  font-size: 0.92rem;
-}
-.footer-brand {
-  font-family: "Cormorant Garamond", serif;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-size: 1.3rem;
-  margin: 0 0 0.4rem;
+  margin-inline: auto;
 }
 .footer-list {
   list-style: none;
@@ -907,7 +957,7 @@ p {
 @media (max-width: 680px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1.1rem;
+    gap: 1rem;
   }
 }
 @media (max-width: 400px) {
