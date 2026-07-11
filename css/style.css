@@ -692,6 +692,7 @@ p {
   aspect-ratio: 3 / 4;
   width: 100%;
   object-fit: cover;
+  object-position: center;
   background: var(--forest-ink);
   margin-bottom: 1.1rem;
   filter: grayscale(0.15);
