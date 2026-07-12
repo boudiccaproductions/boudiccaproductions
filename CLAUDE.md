@@ -5,22 +5,33 @@ Conventions agreed for this repo. Follow them; if you deviate, say why.
 ## What this is
 
 Static marketing site for **boudiccaproductions.com** - a female-founded,
-artist-led theatre company (film & TV later). Plain **HTML + CSS**, **no build
-step**, **no framework**, **no JavaScript** except one tiny inline menu script.
-Hosted on **GitHub Pages** (`CNAME` + `.nojekyll`).
+artist-led theatre company. Plain **HTML + CSS**, **no build step**, **no
+framework**, **no JavaScript** except one tiny inline menu script. Hosted on
+**GitHub Pages** (`CNAME` + `.nojekyll`).
+
+Current page set:
+- `index.html`
+- `mission.html`
+- `who-we-are.html`
+- `projects.html`
+- `blog.html`
+- `contact.html`
+- `privacy-policy.html`
+- `cookie-policy.html`
+- `accessibility.html`
+- `terms.html`
 
 ## Hard rules
 
-- **No build tooling.** Author HTML/CSS directly. Do not introduce npm, bundlers,
-  Sass, a static-site generator, or a CSS framework.
+- **No build tooling.** Author HTML/CSS directly. Do not introduce npm,
+  bundlers, Sass, a static-site generator, or a CSS framework.
 - **No runtime third-party requests.** Fonts are self-hosted; do not add Google
-  Fonts `<link>`s, CDN scripts, analytics, or external stylesheets. Keep it
+  Fonts links, CDN scripts, analytics, or external stylesheets. Keep it
   self-contained and privacy-respecting.
 - **JavaScript is a last resort.** The only script is the burger-menu close
-  handler (inline, per page). Prefer CSS-only solutions (the nav toggle, marquee,
-  and crossfade are all pure CSS).
-- **ASCII punctuation in prose.** Use the hyphen `-`, not en/em dashes. Use
-  straight apostrophes `'`, not curly `’` (keeps nav labels/headings consistent).
+  handler (inline, per page). Prefer CSS-only solutions.
+- **ASCII punctuation in prose.** Use the hyphen `-`, not em dashes. Use
+  straight apostrophes `'`, not curly quotes.
 
 ## Design tokens (single source of truth: `:root` in `css/style.css`)
 
@@ -47,15 +58,14 @@ All three brand values were sampled from the actual logo file - keep them exact.
   (`.eyebrow`) - the logo's "PRODUCTIONS" treatment.
 - Fonts are **self-hosted** in `assets/fonts/` (`fonts.css` = Montserrat,
   `cormorant.css` = Cormorant Garamond), each `@import`ed at the top of
-  `style.css`. To change a weight, download the woff2 and localise it (see how the
-  existing ones are referenced) - never hot-link.
+  `style.css`. To change a weight, download the woff2 and localise it - never
+  hot-link.
 
 ## Text alignment
 
 - **Centred is the default.** `.section` sets `text-align: center` and
   `.section p` gets `margin-inline: auto` so max-width paragraphs stay
-  page-centred (not hugging the left). You do **not** need to add a `center`
-  class.
+  page-centred.
 - Use **`.text-left`** on a block when you want it left-aligned.
 - Bulleted lists stay readable-left inside centred sections
   (`justify-self: center; text-align: left`).
@@ -66,75 +76,79 @@ All three brand values were sampled from the actual logo file - keep them exact.
 | ---------------- | ----------- | -------------------------------------------------- |
 | `logo.png`       | cream baked | on cream areas, or as a framed tile; the footer    |
 | `logo-clear.png` | transparent | on parchment - seamless (Home logo banner)         |
-| `logo-light.png` | transparent | green recoloured to cream + gold - for **dark** bg |
+| `logo-light.png` | transparent | green recoloured to cream + gold - for dark bg     |
 | `wordmark.png`   | cream baked | horizontal lockup - the top-left brand chip        |
-| `favicon-*.png`  | -           | generated from the logo                            |
+| `favicon-*.png`   | -           | generated from the logo                            |
 
-The logo's own cream is `#fbf4e4` (== `--parchment`), so `logo.png` blends on
-parchment. On dark backgrounds the green vanishes - use `logo-light.png`. Regenerate
-the transparent variants with the pure-Python PNG script pattern used previously
-(no ImageMagick/PIL on this machine; `sips` -> BMP -> parse -> write PNG).
+The logo's own cream is `#fbf4e4` (equal to `--parchment`), so `logo.png`
+blends on parchment. On dark backgrounds use `logo-light.png`.
 
 ## Shared chrome is duplicated per page
 
-There are no includes/partials. The header, burger + overlay nav, wordmark chip,
-footer, and menu script are **copied into every `.html` file**. When you change any
-of them, **change all pages together** (a small Python loop over the files keeps
-them in sync - that's how they were built). Pages: `index.html`, `who-we-are.html`,
-`projects.html`, `mission.html`, `contact.html`.
+There are no includes or partials. The header, burger + overlay nav, wordmark
+chip, footer, newsletter band, and menu script are copied into every HTML file.
+When you change any of them, change all pages together.
 
-## Components (classes in `css/style.css`)
+## Components
 
 - **Header** differs by page:
-  - Home (`index.html`): `.site-header.site-header--flush` - just the spear logo
-    (`logo-clear.png`), no bottom border, minimal gap to the next section.
-  - Subpages: `.hero-slider` crossfade slideshow - 3 `.hero-slide`s cycling
-    "Coming Soon" over the cream/green shades. Delays 0/4/8s, keyframe
-    `hero-crossfade`; reduced-motion shows the first slide only. Swap a
-    `.hero-slide` for `<div class="hero-slide"><img ...></div>` to go live.
-- **Nav:** CSS-only. `#nav-toggle` checkbox + `.burger` (fixed top-right) toggles
-  `.nav-overlay` (full-screen). `.brand-chip` (wordmark) is fixed top-left, links
-  home, hides when the menu opens. The only JS closes the overlay on link-click /
-  Escape.
+  - Home (`index.html`): `.site-header.site-header--flush` - just the spear
+    logo (`logo-clear.png`), no bottom border, minimal gap to the next section.
+  - Subpages: `.hero-slider` crossfade slideshow - three `.hero-slide`s cycling
+    "Coming Soon" over the cream and green shades. Reduced-motion shows the
+    first slide only.
+- **Nav:** CSS-only. `#nav-toggle` checkbox + `.burger` (fixed top-right)
+  toggles `.nav-overlay` (full-screen). `.brand-chip` (wordmark) is fixed
+  top-left, links home, and hides when the menu opens. The only JS closes the
+  overlay on link click or Escape.
 - **`.logo-row`** - `1fr auto 1fr` grid: block, logo, block. `.logo-side` are the
   flanking link panels (`.logo-side__title` + `.logo-side__cue`, plus a shade
   class).
 - **`.cta-row`** - `repeat(auto-fit, minmax(200px, 1fr))` grid of `.logo-side`
-  link blocks with **no** logo; wraps on narrow screens. (Home uses a 3-block row:
-  Meet the Company / What's On / Get in Touch.)
-- **`.marquee`** - full-bleed, infinite auto-scroll. `.marquee__track` holds **two
-  identical copies** of the `.coming-slide`s and animates `translateX(-50%)` for a
-  seamless loop - **keep both copies in sync** when editing. Per-slide
-  `margin-right` (not flex `gap`) keeps the loop maths exact. Pauses on hover;
-  reduced-motion switches to manual scroll. Footer-style `border-block` outline.
+  link blocks with no logo; wraps on narrow screens.
+- **`.marquee`** - full-bleed, infinite auto-scroll. `.marquee__track` holds two
+  identical copies of the `.coming-slide`s and animates `translateX(-50%)` for a
+  seamless loop - keep both copies in sync when editing.
 - **Footer** - `.site-footer` cream with a dark-green frame border on its
-  `.container`. `.footer-grid` = four centred columns: logo (`logo.png`), tagline,
-  Explore, Contact.
+  `.container`. `.footer-grid` is four equal centred columns: logo, policy
+  links, Explore, Contact. Footer titles were removed.
 - **`.newsletter`** - pre-footer band (`--parchment-shade`). `.signup` form's
-  `action` is a **placeholder** (`#`); wire it to a mailing-list provider
-  (MailerLite recommended) - static hosting can't process the POST.
-- **Cards** - `.grid.grid--3` / `.grid--4` + `.card` with `.card__photo.photo-shim`
-  placeholders (team, pets, stories).
-- **Shades** (cream/green fills, shared by marquee slides, hero slides, CTA
-  blocks): `.shade-c1` `#f3ead6`, `.shade-c2` `#ece0c8`, `.shade-c3` `#e4d7bd`;
-  `.shade-g1` forest, `.shade-g2` forest-deep, `.shade-g3` `#3a4b3f`. Each sets
-  background + a readable text colour. Alternate cream/green for rhythm.
+  `action` is a placeholder (`#`); wire it to a mailing-list provider
+  (MailerLite recommended) - static hosting cannot process the POST.
+- **Cards** - `.grid.grid--3` / `.grid--4` + `.card` with real pet photos in
+  `who-we-are.html` and placeholder production cards in `projects.html`.
+- **Shades** - cream/green fills shared by marquee slides, hero slides, and CTA
+  blocks. Alternate cream and green for rhythm.
 
-## Placeholders to fill (search these strings)
+## Current content status
 
-`PLACEHOLDER`, `photo-shim`, `Image + link`, `Coming Soon`, `Story or event title`,
-`Short bio to follow`. Outstanding real content: hero/production images, team & pet
-photos + bios (Annabel Caldwell, Eleanor Wilson, Holly Hipwell; pets Luna, Mel,
-Frank), the longer mission copy, local stories/events, the contact email
-(`hello@boudiccaproductions.com` - confirm), and the newsletter form `action`.
+- `mission.html` now has the expanded three-paragraph mission statement.
+- `who-we-are.html` now uses photos for Luna, Mel, and Steve in Pets' Corner.
+- `blog.html` is the editorial home for stories and updates.
+- The old local stories and events section is no longer used.
+- The footer is now full width with no side borders and no footer section
+  titles.
+
+## Placeholders to fill
+
+Search these strings:
+- `PLACEHOLDER`
+- `photo-shim`
+- `Image + link`
+- `Coming Soon`
+- `Story or event title`
+- `Short bio to follow`
+
+Outstanding real content: hero and production images, real production titles and
+photos in the carousel, and the newsletter form action.
 
 ## Deploy
 
-GitHub Pages, deploy-from-branch, folder `/` (root). `CNAME` -> apex; four A
-records point at GitHub Pages (see `README.md`). `.nojekyll` serves files raw.
+GitHub Pages, deploy-from-branch, folder `/` (root). `CNAME` points at the apex
+domain; four A records point at GitHub Pages. `.nojekyll` serves files raw.
 
 ## Local preview
 
-`python3 -m http.server 8000` then `http://localhost:8000`. For a rendered check,
-headless Chrome works (`--screenshot`, `--virtual-time-budget` to catch the
-crossfade/marquee mid-animation).
+`python3 -m http.server 8000` then `http://localhost:8000`. For a rendered
+check, headless Chrome works (`--screenshot`, `--virtual-time-budget` to catch
+the crossfade and marquee mid-animation).
