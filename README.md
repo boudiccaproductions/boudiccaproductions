@@ -40,6 +40,7 @@ call to Google's servers. All tokens live at the top of `css/style.css`.
 - Pets' Corner images for Luna, Mel, and Steve
 - Shared footer and newsletter section across the site
 - Footer policy links for privacy, cookies, accessibility, and terms
+- Current contact email: `info@boudiccaproductions.com`
 
 ## Filling in content
 

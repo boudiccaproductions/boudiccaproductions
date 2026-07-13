@@ -128,6 +128,7 @@ When you change any of them, change all pages together.
 - The old local stories and events section is no longer used.
 - The footer is now full width with no side borders and no footer section
   titles.
+- Current contact email is `info@boudiccaproductions.com`.
 
 ## Placeholders to fill
 
