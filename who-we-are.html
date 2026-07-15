@@ -53,48 +53,26 @@
 
       <!-- ============ TEAM ============ -->
       <!-- PLACEHOLDER names/roles/bios - confirm spellings & fill bios.
-           Add photos to assets/img/team/<name>.jpg and swap the .photo-shim
-           div for: <img class="card__photo" src="assets/img/team/name.jpg" alt="Name" /> -->
+           To add a portrait, replace the .profile-photo__placeholder inside its
+           .profile-photo frame with:
+           <img class="card__photo" src="assets/img/team/name.jpg" alt="Name" /> -->
       <section class="section" style="padding-top:0">
         <div class="container">
-          <div class="grid grid--3">
-            <article class="card">
-              <div class="card__photo photo-shim">Photo</div>
-              <h3 class="card__name">Annabel Caldwell</h3>
-              <p class="card__role">Company Member</p>
-              <p class="card__bio">Short bio to follow.</p>
-            </article>
-
-            <article class="card">
-              <div class="card__photo photo-shim">Photo</div>
-              <h3 class="card__name">Eleanor Wilson</h3>
-              <p class="card__role">Company Member</p>
-              <p class="card__bio">
-                Before co-founding Boudicca Productions, Eleanor worked across
-                the theatre industry in an array of roles. After graduating from
-                the Guildford School of Acting with a BA in Theatre Production,
-                specialising in Stage Management, she went on to work as an
-                assistant at several leading talent agencies, which she still
-                does and thoroughly enjoys.
-              </p>
-              <p class="card__bio">
-                She credits her background in stage management with making her
-                an expert wrangler of information, actors and creatives alike,
-                while also fostering an addiction to beautifully organised
-                spreadsheets and even prettier stationery.
-              </p>
-              <p class="card__bio">
-                Outside of the theatre and office, Eleanor can usually be found
-                blasting her questionable taste in music, rummaging through
-                charity bookshops, or drinking Diet Coke as though it's a
-                life-saving elixir.
-              </p>
-            </article>
-
-            <article class="card">
-              <div class="card__photo photo-shim">Photo</div>
+          <div class="grid grid--3 team-grid">
+            <article class="card card--profile">
+              <div class="profile-photo">
+                <span class="profile-photo__tape" aria-hidden="true"></span>
+                <img
+                  class="card__photo"
+                  src="assets/img/team/holly-hipwell.png"
+                  alt="Holly Hipwell as a child with her father"
+                  width="1086"
+                  height="1448"
+                />
+              </div>
               <h3 class="card__name">Holly Hipwell</h3>
-              <p class="card__role">Company Member</p>
+              <p class="card__role">Founder</p>
+              <p class="card__job-title">Creative Director</p>
               <p class="card__bio">
                 Before co-founding Boudicca Productions, Holly spent her time
                 managing complex logistics and bringing big ideas to life,
@@ -117,6 +95,78 @@
                 why Luna is far superior, hunting for the next fantasy novel
                 with a steamy cup of coffee and sweet talking Claude (the AI)
                 into doing her bidding.
+              </p>
+            </article>
+
+            <article class="card card--profile">
+              <div class="profile-photo">
+                <span class="profile-photo__tape" aria-hidden="true"></span>
+                <img
+                  class="card__photo"
+                  src="assets/img/team/eleanor-wilson.jpg"
+                  alt="Eleanor Wilson"
+                  width="436"
+                  height="755"
+                />
+              </div>
+              <h3 class="card__name">Eleanor Wilson</h3>
+              <p class="card__role">Founder</p>
+              <p class="card__job-title">Creative Director</p>
+              <p class="card__bio">
+                Before co-founding Boudicca Productions, Eleanor worked across
+                the theatre industry in an array of roles. After graduating from
+                the Guildford School of Acting with a BA in Theatre Production,
+                specialising in Stage Management, she went on to work as an
+                assistant at several leading talent agencies, which she still
+                does and thoroughly enjoys.
+              </p>
+              <p class="card__bio">
+                She credits her background in stage management with making her
+                an expert wrangler of information, actors and creatives alike,
+                while also fostering an addiction to beautifully organised
+                spreadsheets and even prettier stationery.
+              </p>
+              <p class="card__bio">
+                Outside of the theatre and office, Eleanor can usually be found
+                blasting her questionable taste in music, rummaging through
+                charity bookshops, or drinking Diet Coke as though it's a
+                life-saving elixir.
+              </p>
+            </article>
+
+            <article class="card card--profile">
+              <div class="profile-photo">
+                <span class="profile-photo__tape" aria-hidden="true"></span>
+                <img
+                  class="card__photo"
+                  src="assets/img/team/annabel-caldwell.jpg"
+                  alt="Annabel Caldwell as a child"
+                  width="540"
+                  height="720"
+                />
+              </div>
+              <h3 class="card__name">Annabel Caldwell</h3>
+              <p class="card__role">Founder</p>
+              <p class="card__job-title">Creative Associate</p>
+              <p class="card__bio">
+                Before co-founding Boudicca Productions, Annabel graduated with
+                a BA in Theology and Performing Arts in 2024, gaining experience
+                across acting, directing, writing and production. She later
+                completed the Mercury Theatre's Directors' Course, further
+                refining her directing practice and creative leadership.
+              </p>
+              <p class="card__bio">
+                Since graduating, Annabel has worked across a range of
+                professional and amateur productions as an assistant director,
+                stage manager, performer and co-director. She is passionate about
+                championing new writing, reimagining classic texts and creating
+                rehearsal rooms where creativity and collaboration can flourish.
+              </p>
+              <p class="card__bio">
+                Outside the rehearsal room, Annabel can usually be found serving
+                pints at work, adding an unruly number of books to her ever-growing
+                "to be read" pile, or convincing herself that buying just one more
+                Sanrio blind box is a perfectly sensible investment.
               </p>
             </article>
           </div>

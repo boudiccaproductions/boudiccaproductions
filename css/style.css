@@ -713,13 +713,207 @@ p {
   letter-spacing: var(--track);
   font-size: 0.68rem;
   opacity: 0.7;
-  margin: 0 0 0.7rem;
+  margin: 0 0 0.2rem;
+}
+.card__job-title {
+  margin: 0 0 0.85rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  color: var(--forest-deep);
 }
 .card__bio {
   font-size: 0.95rem;
   font-weight: 300;
   margin-inline: auto;
   max-width: 34ch;
+}
+
+/* Scrapbook portrait template — replace only the placeholder with an image. */
+.team-grid {
+  align-items: start;
+  gap: clamp(2.5rem, 4.5vw, 4rem);
+}
+.profile-photo {
+  --profile-tilt: -0.2deg;
+  position: relative;
+  isolation: isolate;
+  width: min(100% - 1.25rem, 330px);
+  margin: 1.1rem auto 2.2rem;
+  padding: clamp(0.65rem, 1.5vw, 0.9rem);
+  padding-bottom: clamp(1.2rem, 2.5vw, 1.65rem);
+  background: #fffaf0;
+  border: 1px solid rgba(43, 76, 63, 0.11);
+  box-shadow:
+    0 1.2rem 2.5rem rgba(31, 58, 48, 0.1),
+    0 0.2rem 0.45rem rgba(31, 58, 48, 0.08);
+  transform: rotate(var(--profile-tilt));
+}
+.card--profile:nth-child(2) .profile-photo {
+  --profile-tilt: 0.35deg;
+  width: min(100% - 0.75rem, 338px);
+  margin-top: 2.5rem;
+  padding: clamp(0.8rem, 1.7vw, 1rem);
+  padding-bottom: clamp(1rem, 2vw, 1.35rem);
+}
+.card--profile:nth-child(3) .profile-photo {
+  --profile-tilt: -0.3deg;
+  width: min(100% - 1rem, 330px);
+  margin-top: 0.25rem;
+  padding-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+.profile-photo::before,
+.profile-photo::after,
+.profile-photo__tape {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: clamp(5.5rem, 9vw, 7.5rem);
+  height: clamp(2rem, 3.5vw, 2.75rem);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 250, 222, 0.35)),
+    rgba(213, 190, 137, 0.48);
+  border: 1px solid rgba(122, 103, 63, 0.1);
+  box-shadow: 0 2px 3px rgba(43, 76, 63, 0.08);
+  clip-path: polygon(2% 9%, 98% 0, 96% 92%, 0 100%);
+  pointer-events: none;
+}
+.profile-photo__tape {
+  top: 55%;
+  right: -3.4rem;
+  left: auto;
+  transform: rotate(82deg);
+}
+.profile-photo::before {
+  top: -0.9rem;
+  left: -2.3rem;
+  transform: rotate(-38deg);
+}
+.profile-photo::after {
+  right: auto;
+  bottom: -0.85rem;
+  left: -1.5rem;
+  transform: rotate(32deg);
+}
+.card--profile:nth-child(2) .profile-photo::before {
+  top: -1.15rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(3deg);
+}
+.card--profile:nth-child(2) .profile-photo::after {
+  right: -2.5rem;
+  bottom: 1rem;
+  left: auto;
+  transform: rotate(-66deg);
+}
+.card--profile:nth-child(2) .profile-photo__tape {
+  top: auto;
+  right: auto;
+  bottom: -0.8rem;
+  left: 0.8rem;
+  transform: rotate(18deg);
+}
+.card--profile:nth-child(3) .profile-photo::before {
+  top: 1.2rem;
+  left: -2.65rem;
+  transform: rotate(-68deg);
+}
+.card--profile:nth-child(3) .profile-photo::after {
+  right: -1.9rem;
+  bottom: -0.85rem;
+  left: auto;
+  transform: rotate(-31deg);
+}
+.card--profile:nth-child(3) .profile-photo__tape {
+  top: -0.8rem;
+  right: -1.3rem;
+  left: auto;
+  transform: rotate(19deg);
+}
+.profile-photo .card__photo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  box-shadow: inset 0 0 0 1px rgba(251, 244, 228, 0.18);
+}
+.card--profile:nth-child(2) .profile-photo .card__photo {
+  object-position: center top;
+}
+.profile-photo__placeholder {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: rgba(251, 244, 228, 0.88);
+  background:
+    radial-gradient(circle at 72% 24%, rgba(213, 165, 65, 0.22), transparent 25%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.06), transparent 45%),
+    var(--forest-deep);
+}
+.profile-photo__placeholder::before {
+  content: "";
+  position: absolute;
+  width: 48%;
+  aspect-ratio: 1;
+  top: 17%;
+  left: 26%;
+  border-radius: 50%;
+  background: rgba(243, 234, 214, 0.12);
+  box-shadow: 0 9rem 0 4.1rem rgba(243, 234, 214, 0.1);
+}
+.profile-photo__placeholder span {
+  position: relative;
+  z-index: 1;
+  align-self: end;
+  margin-bottom: 12%;
+  font-size: 0.62rem;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 560px) {
+  .profile-photo {
+    width: min(82vw, 310px);
+  }
+  .profile-photo::before {
+    left: -1.6rem;
+  }
+  .profile-photo::after {
+    right: auto;
+    left: -1.1rem;
+  }
+  .card--profile:nth-child(2) .profile-photo,
+  .card--profile:nth-child(3) .profile-photo {
+    width: min(82vw, 310px);
+    margin-top: 1.5rem;
+  }
+  .card--profile:nth-child(2) .profile-photo::after {
+    right: -1.65rem;
+    left: auto;
+  }
+  .card--profile:nth-child(3) .profile-photo::after {
+    right: -1.5rem;
+    left: auto;
+  }
+  .profile-photo__tape {
+    right: -2.45rem;
+    left: auto;
+  }
+  .card--profile:nth-child(3) .profile-photo::before {
+    left: -1.85rem;
+  }
+  .card--profile:nth-child(3) .profile-photo__tape {
+    right: -0.9rem;
+  }
 }
 
 /* photo placeholder shim */
