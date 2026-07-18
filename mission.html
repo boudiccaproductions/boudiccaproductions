@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://boudiccaproductions.com/mission.html" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=20260718-2" />
   </head>
   <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu" />
@@ -93,14 +93,20 @@
             Be first to hear about new productions, casting calls and opening
             nights.
           </p>
-          <!-- PLACEHOLDER: set `action` to your mailing-list provider (Mailchimp,
-               MailerLite, Buttondown, Formspree...). Static hosting cannot process
-               the POST itself. -->
-          <form class="signup" action="#" method="post">
-            <label class="sr-only" for="nl-email">Email address</label>
-            <input id="nl-email" type="email" name="email" placeholder="you@example.com" required />
-            <button class="btn btn--cta" type="submit">Sign up</button>
-          </form>
+          <div id="mlb2-43827336" class="ml-subscribe-form ml-subscribe-form-43827336">
+            <div class="row-form">
+              <form class="signup ml-block-form" action="https://assets.mailerlite.com/jsonp/2514480/forms/193180775836813026/subscribe" method="post" target="_blank">
+                <label class="sr-only" for="nl-email">Email address</label>
+                <input id="nl-email" type="email" name="fields[email]" placeholder="you@example.com" autocomplete="email" required />
+                <input type="hidden" name="ml-submit" value="1" />
+                <input type="hidden" name="anticsrf" value="true" />
+                <button class="btn btn--cta" type="submit">Sign up</button>
+              </form>
+            </div>
+            <div class="row-success newsletter__status" style="display: none" tabindex="-1">
+              <p><strong>Nearly there.</strong> Please check your inbox and confirm your subscription.</p>
+            </div>
+          </div>
           <p class="newsletter__note">
             We will only email about our work. Unsubscribe anytime.
           </p>
@@ -147,6 +153,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519"></script>
+    <script src="js/newsletter.js"></script>
     <script>
       (function () {
         var t = document.getElementById("nav-toggle");

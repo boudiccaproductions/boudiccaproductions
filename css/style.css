@@ -255,6 +255,20 @@ p {
   opacity: 0.6;
   margin-top: 1.2rem;
 }
+.newsletter__status {
+  margin: 2rem auto 0;
+  max-width: 38rem;
+  width: fit-content;
+  padding: 1.1rem 1.5rem;
+  border: 1px solid var(--forest);
+  border-top: 4px solid var(--gold);
+  background: var(--parchment);
+  box-shadow: 5px 5px 0 rgba(43, 76, 63, 0.12);
+  color: var(--forest);
+}
+.newsletter__status p {
+  margin: 0;
+}
 
 /* ============================================================
    Header / nav

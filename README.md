@@ -49,7 +49,7 @@ Search the HTML for `PLACEHOLDER` and `photo-shim`. To do:
 - Add a hero / production image and wire it into the homepage slideshow or
   feature area
 - Add real production titles/photos in the `projects.html` carousel
-- Wire the newsletter form `action` to a mailing-list provider
+- Authenticate the newsletter sending domain in MailerLite and complete an end-to-end signup test
 - Expand the blog with real posts and editorial content
 
 TV and Film categories are built but hidden (`class="is-hidden"`) for the
