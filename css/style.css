@@ -518,14 +518,14 @@ p {
 }
 
 /* ============================================================
-   Coming-soon carousel — placeholder slides (cream/green shades)
-   mark where linked production images will go. Footer-style
-   outline; scrolls horizontally across the page.
+   Coming-soon carousel — single-line portraits in the brand palette.
+   Footer-style outline; scrolls horizontally across the page.
    ============================================================ */
 .marquee {
   width: 100%; /* full-bleed — scrolls across the whole page */
   overflow: hidden;
   border-block: 1px solid var(--forest); /* footer-style outline, full width */
+  background: var(--parchment-shade);
   padding-block: 1rem;
   margin-top: 1.75rem;
 }
@@ -549,13 +549,57 @@ p {
 }
 .coming-slide {
   flex: 0 0 clamp(220px, 42vw, 320px);
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1;
   margin-right: 1rem; /* per-slide gap keeps the loop maths exact */
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
   text-decoration: none;
   border: 1px solid rgba(43, 76, 63, 0.22);
-  transition: transform 0.2s ease, filter 0.2s ease;
+  color: var(--forest);
+  overflow: hidden;
+  position: relative;
+}
+.coming-figure {
+  width: 72%;
+  height: 70%;
+  display: block;
+  background-color: currentColor;
+  -webkit-mask-image: url("../assets/img/coming-soon-women-v4.png");
+  mask-image: url("../assets/img/coming-soon-women-v4.png");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 300% 100%;
+  mask-size: 300% 100%;
+}
+.coming-figure--one {
+  -webkit-mask-position: left center;
+  mask-position: left center;
+}
+.coming-figure--two {
+  -webkit-mask-position: center center;
+  mask-position: center center;
+}
+.coming-figure--three {
+  -webkit-mask-position: right center;
+  mask-position: right center;
+}
+.coming-figure--four,
+.coming-figure--five {
+  -webkit-mask-image: url("../assets/img/coming-soon-women-additional.png");
+  mask-image: url("../assets/img/coming-soon-women-additional.png");
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+}
+.coming-figure--four {
+  -webkit-mask-position: left center;
+  mask-position: left center;
+}
+.coming-figure--five {
+  -webkit-mask-position: right center;
+  mask-position: right center;
 }
 @media (prefers-reduced-motion: reduce) {
   .marquee {
@@ -565,20 +609,21 @@ p {
     animation: none;
   }
 }
-.coming-slide span {
-  font-weight: 200;
+.coming-label {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.68rem;
-  opacity: 0.8;
+  letter-spacing: 0.24em;
+  font-size: 0.78rem;
+  opacity: 0.9;
 }
-.coming-slide:hover,
-.coming-slide:focus-visible {
-  transform: translateY(-2px);
-  filter: brightness(0.97);
-  outline: none;
+.marquee .coming-slide.line-gold {
+  color: var(--gold);
 }
-/* shades — alternating cream and green so the slots read as placeholders */
+.marquee .coming-slide.line-deep {
+  color: var(--forest-deep);
+}
+/* shades — alternating cream and green for a sketchbook-like rhythm */
 .shade-c1 {
   background: #f3ead6;
   color: var(--forest);

@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://boudiccaproductions.com/" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png" />
-    <link rel="stylesheet" href="css/style.css?v=20260718-2" />
+    <link rel="stylesheet" href="css/style.css?v=20260725-1" />
   </head>
   <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu" />
@@ -110,30 +110,22 @@
         style="padding-bottom: 0"
         aria-label="Upcoming productions"
       >
-        <!-- MARQUEE: full-bleed, infinite auto-scroll. The track holds TWO identical
-             copies of the slides; the CSS shifts it -50% for a seamless loop, so keep
-             the copies in sync. Placeholder slides (cream/green shades) mark where
-             linked production images will go. Swap each <a> in BOTH copies for a real
-             image link, e.g.
-               <a class="coming-slide" href="/show">
-                 <img src="assets/img/projects/show.jpg" alt="Show title" />
-               </a> -->
+        <!-- Full-bleed, infinitely scrolling coming-soon artwork. The track holds
+             two identical copies of the cards so the animation loops seamlessly. -->
         <div class="marquee" aria-label="Upcoming productions">
           <div class="marquee__track">
             <!-- copy 1 -->
-            <a class="coming-slide shade-c1" href="#"><span>Image + link</span></a>
-            <a class="coming-slide shade-g1" href="#"><span>Image + link</span></a>
-            <a class="coming-slide shade-c2" href="#"><span>Image + link</span></a>
-            <a class="coming-slide shade-g2" href="#"><span>Image + link</span></a>
-            <a class="coming-slide shade-c3" href="#"><span>Image + link</span></a>
-            <a class="coming-slide shade-g3" href="#"><span>Image + link</span></a>
+            <div class="coming-slide shade-c1"><span class="coming-figure coming-figure--one" aria-hidden="true"></span><span class="coming-label">Coming Soon</span></div>
+            <div class="coming-slide shade-g1"><span class="coming-figure coming-figure--two" aria-hidden="true"></span><span class="coming-label">Coming Soon</span></div>
+            <div class="coming-slide shade-c2 line-deep"><span class="coming-figure coming-figure--three" aria-hidden="true"></span><span class="coming-label">Coming Soon</span></div>
+            <div class="coming-slide shade-g2 line-gold"><span class="coming-figure coming-figure--four" aria-hidden="true"></span><span class="coming-label">Coming Soon</span></div>
+            <div class="coming-slide shade-c3"><span class="coming-figure coming-figure--five" aria-hidden="true"></span><span class="coming-label">Coming Soon</span></div>
             <!-- copy 2 (visual duplicate, hidden from assistive tech) -->
-            <a class="coming-slide shade-c1" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
-            <a class="coming-slide shade-g1" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
-            <a class="coming-slide shade-c2" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
-            <a class="coming-slide shade-g2" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
-            <a class="coming-slide shade-c3" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
-            <a class="coming-slide shade-g3" href="#" aria-hidden="true" tabindex="-1"><span>Image + link</span></a>
+            <div class="coming-slide shade-c1" aria-hidden="true"><span class="coming-figure coming-figure--one"></span><span class="coming-label">Coming Soon</span></div>
+            <div class="coming-slide shade-g1" aria-hidden="true"><span class="coming-figure coming-figure--two"></span><span class="coming-label">Coming Soon</span></div>
+            <div class="coming-slide shade-c2 line-deep" aria-hidden="true"><span class="coming-figure coming-figure--three"></span><span class="coming-label">Coming Soon</span></div>
+            <div class="coming-slide shade-g2 line-gold" aria-hidden="true"><span class="coming-figure coming-figure--four"></span><span class="coming-label">Coming Soon</span></div>
+            <div class="coming-slide shade-c3" aria-hidden="true"><span class="coming-figure coming-figure--five"></span><span class="coming-label">Coming Soon</span></div>
           </div>
         </div>
       </section>
