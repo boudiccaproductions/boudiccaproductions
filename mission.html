@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png" />
-    <link rel="stylesheet" href="css/style.css?v=20260803-17" />
+    <link rel="stylesheet" href="css/style.css?v=20260804-20" />
   </head>
   <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu" />
@@ -33,20 +33,27 @@
           <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <header class="site-header">
+    <header class="site-header site-header--focus">
       <div class="hero-slider" aria-label="Our Mission">
-        <div class="hero-slide shade-g1"><span>Our Mission</span></div>
-        <div class="hero-slide shade-c1"><span>Our Mission</span></div>
-        <div class="hero-slide shade-g2"><span>Our Mission</span></div>
+        <div class="mission-split-static">
+          <div class="mission-split-portrait" aria-hidden="true">
+            <i class="coming-figure coming-figure--one mission-portrait-layer"></i>
+            <i class="coming-figure coming-figure--two mission-portrait-layer"></i>
+            <i class="coming-figure coming-figure--three mission-portrait-layer"></i>
+            <i class="coming-figure coming-figure--four mission-portrait-layer"></i>
+            <i class="coming-figure coming-figure--five mission-portrait-layer"></i>
+          </div>
+          <div class="mission-split-copy"><small>Boudicca Productions</small><span>Our<br />Mission</span><a href="#mission-statement">Read what drives us &darr;</a></div>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="section center">
+      <section class="section mission-page center" id="mission-statement">
         <div class="container">
           <p class="eyebrow">Female-Founded &middot; Artist-Led</p>
           <h1>Our Mission</h1>
-          <div class="prose">
+          <div class="prose mission-statement">
             <p>
               Boudicca Productions is a female-founded theatre company creating
               bold, original theatre across Essex and the wider East of England.
@@ -74,7 +81,7 @@
       </section>
 
       <!-- ============ BLOG CTA ============ -->
-      <section class="section section--tint">
+      <section class="section mission-blog-cta">
         <div class="container">
           <p class="eyebrow center">Stories, notes and updates</p>
           <h2 class="center">Visit the blog</h2>
