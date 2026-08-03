@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://boudiccaproductions.com/blog.html" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png" />
-    <link rel="stylesheet" href="css/style.css?v=20260718-2" />
+    <link rel="stylesheet" href="css/style.css?v=20260803-14" />
   </head>
   <body>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu" />
@@ -49,13 +49,30 @@
 
       <section class="section">
         <div class="container blog-row">
+          <!--
+            BLOG COVER PRESETS
+            Choose one class for each published post:
+            blog-cover--editorial  (option 4: full photograph, asymmetric text)
+            blog-cover--split      (option 5: photograph above, book jacket below)
+            blog-cover--proscenium (option 6: photograph in a theatre-inspired arch)
+            Set that post's image with: style="--blog-cover-image: url('../assets/img/FILENAME.jpg')"
+            Full instructions and a copyable prompt are in BLOG-POST-GUIDE.md.
+          -->
           <article class="blog-tile shade-c1">
-            <div class="card__photo photo-shim">Photo</div>
-            <div class="blog-tile__body">
-              <p class="eyebrow">Featured</p>
-              <h3 class="card__name">Post title</h3>
-              <p class="card__bio">A larger opening story, essay or announcement can live here.</p>
-            </div>
+            <a class="blog-tile__link" href="a-seat-at-the-table.html">
+              <div class="blog-tile__cover blog-cover--split" style="--blog-cover-image: url('../assets/img/a-seat-at-the-table-cover.jpg')">
+                <div class="blog-cover__copy">
+                  <span class="blog-tile__kicker">From the Blog</span>
+                  <span class="blog-tile__title">A Seat at the Table</span>
+                  <span class="blog-tile__author">Eleanor Wilson</span>
+                </div>
+              </div>
+              <div class="blog-tile__body">
+                <p class="eyebrow">3 August 2026</p>
+                <p class="card__bio">Founding a female-led theatre company in Colchester. Scared, excited and doing it anyway.</p>
+                <span class="blog-tile__read">Read the story <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
           </article>
           <article class="blog-tile shade-g1">
             <div class="card__photo photo-shim">Photo</div>
