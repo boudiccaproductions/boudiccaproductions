@@ -20,7 +20,6 @@ Add the chosen class to `.blog-tile__cover` and set its photograph through `--bl
   style="--blog-cover-image: url('../assets/img/post-cover.jpg')"
 >
   <div class="blog-cover__copy">
-    <span class="blog-tile__kicker">From the Blog</span>
     <span class="blog-tile__title">Post title</span>
     <span class="blog-tile__author">Author name</span>
   </div>
@@ -40,7 +39,7 @@ If no preset is specified, ask which of the three approved covers should be used
 Every full post follows the same order:
 
 1. Metadata in the document head: page title, description, canonical URL and `BlogPosting` structured data.
-2. Article header: “From the Blog”, title, tagline, full author name and machine-readable publication date.
+2. Article header: title, tagline, full author name and machine-readable publication date.
 3. Optional banner: a shallow full-width image between the header and article. Omit the banner element entirely when a post does not need one.
 4. Article body: one paragraph per source-document paragraph in the standard readable column.
 5. Author panel: author name, short approved description and link to `who-we-are.html`.
