@@ -2,6 +2,10 @@
 
 Every published blog card uses the same opening-book interaction and one of three approved photographic cover presets.
 
+## Author-text rule
+
+Treat every submitted article as approved author copy. Reproduce the body text verbatim, including wording, paragraph order, punctuation, capitalisation and parenthetical remarks. Do not copy-edit, correct, shorten, expand or add pull quotes unless the author explicitly approves those changes. Layout, metadata and accessibility text must remain separate from the author's article body.
+
 ## Approved cover presets
 
 - `blog-cover--editorial` — option 4, Editorial Edge. A full photograph with asymmetric text.
